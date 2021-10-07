@@ -57,3 +57,22 @@ function debounce(func, timeout = 300){
     console.log('Saving data');
   }
   const processChange = debounce(() => saveInput());
+
+  //Explain React render
+  /*
+  Rendering is a process that is triggered by a change of state in some component of 
+  your application, when a state change occurs React: It will collect from the root of 
+  your App all the components that requested a re-render because their state or their props changed.
+
+  Timeouts and Promises both serve to execute code in an asynchronous way but with differences characteristics and purposes:
+
+  setTimeout - Delays the execution of a function by specific time duration. 
+  - Does not block the rest of the code execution (asynchronous behavior) - 
+  They create Macrotask (browser internal operation)
+
+  Promises - They are a wrapper to allow asynchronous execution of code(Eg: an ajax call). 
+  (Does not depend on specific time duration) - They are especially useful to chain different async calls. 
+  - Does not block the rest of the code execution (asynchronous behavior) at less you are using the await operator.
+  - They create Microtask (browser internal operation), which have priority over the Macrotask.
+
+  */
